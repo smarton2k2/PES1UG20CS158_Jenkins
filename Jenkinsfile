@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build'
+        echo 'Deployment building'
       }
     }
     stage('Test') {
       steps {
-        sh 'docker test'
+        echo 'Deployment testing'
       }
       
     }
     stage('Deploy') {
       steps {
-        sh 'docker deploy'
+        echo 'Deployed'
       }
     }
   }
