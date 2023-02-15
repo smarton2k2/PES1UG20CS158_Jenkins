@@ -3,25 +3,24 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
-        sh 'npm run build'
+        sh 'mvn clean install'
       }
     }
     stage('Test') {
       steps {
-        sh 'npm test'
+        sh 'mvn test'
       }
       
     }
     stage('Deploy') {
       steps {
-        sh 'npm run deploy'
+        sh 'mvn deploy'
       }
     }
   }
   post {
     always {
-      sh 'npm run cleanup'
+      echo 'Deployment pending'
     }
     success {
       echo 'Pipeline succeeded!'
