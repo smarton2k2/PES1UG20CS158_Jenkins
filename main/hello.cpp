@@ -7,5 +7,6 @@ int main(void) {
   cout << "Hello, Jenkins\n";
   cout << "I have successfully built and run\n";
   cout << "This is done automatically using webhooks, how cool is that";
+  cout << "This is running with a pipeline script";
   return 0;
 }
