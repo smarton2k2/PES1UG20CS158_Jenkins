@@ -3,18 +3,18 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn clean install'
+        sh 'docker build'
       }
     }
     stage('Test') {
       steps {
-        sh 'mvn test'
+        sh 'docker test'
       }
       
     }
     stage('Deploy') {
       steps {
-        sh 'mvn deploy'
+        sh 'docker deploy'
       }
     }
   }
