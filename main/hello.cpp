@@ -6,6 +6,6 @@ int main(void) {
   cout << "Hello, World\n";
   cout << "Hello, Jenkins\n";
   cout << "I have successfully built and run\n";
-  cout << "This is done automatically, isn't it cool";
+  cout << "This is done automatically using webhooks, how cool is that";
   return 0;
 }
