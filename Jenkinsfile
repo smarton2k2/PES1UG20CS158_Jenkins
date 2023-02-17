@@ -3,12 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Deployment building'
+        sh "make -C main"
+        echo 'Building folder'
       }
     }
     stage('Test') {
       steps {
-        echo 'Deployment testing'
+         sh "/var/jenkins_home/workspace/pes1ug20cs158/main/hello_exec"
+         echo 'Testing completed'
       }
       
     }
